@@ -1,3 +1,5 @@
+package ru.netology.TestRadio.Radio;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -28,6 +30,7 @@ public class RadioTest {
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void previousStation() {     //предъидущая станция
         Radio radio = new Radio();
@@ -39,6 +42,7 @@ public class RadioTest {
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void increaseVolume() {   //прибавить громкость
         Radio radio = new Radio();
@@ -51,6 +55,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void reduceVolume() {      //убавить громкость
         Radio radio = new Radio();
@@ -63,6 +68,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void reduceVolume2() {      //убавить громкость меньше минимального
         Radio radio = new Radio();
@@ -75,6 +81,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void increaseVolume2() {   //прибавить громкость больше максимума
         Radio radio = new Radio();
@@ -85,6 +92,28 @@ public class RadioTest {
         int expected = 100;
         int actual = radio.getCurrentVolume();
 
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void nextStationAfterMax() {     //следущая станция после Max
+        Radio radio = new Radio();
+
+        radio.setCurrentStation(9);
+        radio.nextStation();
+
+        int expected = 0;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void previousStationAfterMin() {     //предъидущая станция после Min
+        Radio radio = new Radio();
+
+        radio.setCurrentStation(0);
+        radio.previousStation();
+
+        int expected = 9;
+        int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
 

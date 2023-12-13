@@ -1,4 +1,5 @@
-package ru.netology.TestRadio.
+package ru.netology.TestRadio.Radio;
+
 public class Radio {
 
     private int currentStation;  // текущая станция
@@ -21,19 +22,21 @@ public class Radio {
         if (newCurrentStation < 0) {
             return;
         }
+
     }
+
 
     public void nextStation() {  //следующая радиостанция
         if (currentStation < 9) {
             currentStation = currentStation + 1;
-        } else {
+        }else {
             currentStation = 0;
         }
     }
 
     public void previousStation() {  //предыдущая радиостанция
         if (currentStation > 0) {
-            currentStation = currentStation -1;
+            currentStation = currentStation - 0;
         } else {
             currentStation = 9;
         }
