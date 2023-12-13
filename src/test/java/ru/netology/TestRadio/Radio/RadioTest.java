@@ -106,7 +106,7 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
     @Test
-    public void previousStationAfterMin() {     //предъидущая станция после Min
+    public void previousStationAfterMin() {     //предидущая станция после Min
         Radio radio = new Radio();
 
         radio.setCurrentStation(0);
