@@ -3,7 +3,6 @@ package ru.netology;
 public class Radio {
     private int currentVolume;  // текушая громкость
     private int currentStation;  // текущая станция
-
     public int getCurrentVolume() {
         return currentVolume;
     }
@@ -39,14 +38,14 @@ public class Radio {
             currentVolume = currentVolume - 1;
         }
     }
-    public void nextStation() {  //следующая радиостанция
+    public void next() {  //следующая радиостанция
         if (currentStation < 9) {
             currentStation = currentStation + 1;
         }else {
             currentStation = 0;
         }
     }
-    public void previousStation() {  //предыдущая радиостанция
+    public void previous() {  //предыдущая радиостанция
         if (currentStation > 0) {
             currentStation = currentStation - 1;
         } else {

@@ -3,8 +3,6 @@ package ru.netology;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class RadioTest {
     Radio radio = new Radio();
 
@@ -87,7 +85,7 @@ public class RadioTest {
     public void nextStation() {     //следующая станция
 
         radio.setCurrentStation(9);
-        radio.nextStation();
+        radio.next();
 
         int expected = 0;
         int actual = radio.getCurrentStation();
@@ -97,7 +95,7 @@ public class RadioTest {
     public void nextStationAfterMax() {     //следущая станция после Max
 
         radio.setCurrentStation(9);
-        radio.nextStation();
+        radio.next();
 
         int expected = 0;
         int actual = radio.getCurrentStation();
@@ -107,7 +105,7 @@ public class RadioTest {
     public void previousStation() {     //предъидущая станция
 
         radio.setCurrentStation(0);
-        radio.previousStation();
+        radio.previous();
 
         int expected = 9;
         int actual = radio.getCurrentStation();
@@ -118,7 +116,7 @@ public class RadioTest {
 
 
         radio.setCurrentStation(0);
-        radio.previousStation();
+        radio.previous();
 
         int expected = 9;
         int actual = radio.getCurrentStation();
