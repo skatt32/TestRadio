@@ -22,9 +22,7 @@ public class Radio {
         if (newCurrentStation < 0) {
             return;
         }
-
     }
-
 
     public void nextStation() {  //следующая радиостанция
         if (currentStation < 9) {
@@ -43,13 +41,13 @@ public class Radio {
     }
 
     public void setCurrentVolume(int newCurrentVolume) {  // установка громкости
-        currentVolume = newCurrentVolume;
-        if (newCurrentVolume > 100) {
-            return;
-        }
-        if (newCurrentVolume < 0) {
-            return;
-        }
+ //       currentVolume = newCurrentVolume;
+ //       if (newCurrentVolume > 100) {
+//        return;
+ //       }
+ //       if (newCurrentVolume < 0) {
+ //           return;
+ //       }
     }
 
     public void increaseVolume() { // увеличить громкость на 1

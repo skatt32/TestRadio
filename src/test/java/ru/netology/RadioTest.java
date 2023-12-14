@@ -116,6 +116,28 @@ public class RadioTest {
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void setStationSelectionIsGreaterThanMax() {   //выбор станции больше Max
+        Radio radio = new Radio();
+
+        radio.setCurrentStation(10);
+
+        int expected = 0;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setStationSelectionIsLessThanMin() {   //выбор станции меньше Min
+        Radio radio = new Radio();
+
+        radio.setCurrentStation(-1);
+
+        int expected = 0;
+        int actual = radio.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
 
 
 }
