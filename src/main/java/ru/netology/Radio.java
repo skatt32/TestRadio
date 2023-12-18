@@ -3,7 +3,7 @@ package ru.netology;
 public class Radio {
     private int currentVolume;          // текущая громкость
     private int currentRadioStation;        // текущая радиостанция
-
+    
     public int getCurrentVolume() {
         return currentVolume;
     }
@@ -23,7 +23,7 @@ public class Radio {
     }
 
     public void setCurrentVolume(int newCurrentVolume) {
-//        if (newCurrentVolume > 10) {
+//        if (newCurrentVolume > 100) {
 //            return;
 //        }
 //        if (newCurrentVolume < 0) {
@@ -34,7 +34,7 @@ public class Radio {
 
 
     public void volumeUp() {                // увеличение громкости на 1
-        if (currentVolume < 10) {
+        if (currentVolume < 100) {
             currentVolume = currentVolume + 1;
         }
     }
