@@ -1,55 +1,65 @@
 package ru.netology;
 
 public class Radio {
-    private int currentVolume;  // текушая громкость
-    private int currentStation;  // текущая станция
+    private int currentVolume;          // текущая громкость
+    private int currentRadioStation;        // текущая радиостанция
+
     public int getCurrentVolume() {
         return currentVolume;
     }
-    public int getCurrentStation() {
-        return currentStation;
-    }
-    public void setCurrentStation(int newCurrentStation) {  // установка станции
 
-        if (newCurrentStation > 9) {
-            return;
-        }
-        if (newCurrentStation < 0) {
-            return;
-        }
-        currentStation = newCurrentStation;
+    public int getCurrentRadioStation() {
+        return currentRadioStation;
     }
-    public void setCurrentVolume(int newCurrentVolume) {  // установка громкости
-//       if (newCurrentVolume > 100) {
-//           return;
-//       }
-//       if (newCurrentVolume < 0) {
-//           return;
-//       }
+
+    public void setCurrentRadioStation(int newCurrentRadioStation) {  // установка радиостанции
+        if (newCurrentRadioStation > 9) {
+            return;
+        }
+        if (newCurrentRadioStation < 0) {
+            return;
+        }
+        currentRadioStation = newCurrentRadioStation;
+    }
+
+    public void setCurrentVolume(int newCurrentVolume) {
+//        if (newCurrentVolume > 10) {
+//            return;
+//        }
+//        if (newCurrentVolume < 0) {
+//            return;
+//        }
         currentVolume = newCurrentVolume;
     }
-    public void increaseVolume() { // увеличить громкость на 1
-        if (currentVolume < 100) {
+
+
+    public void volumeUp() {                // увеличение громкости на 1
+        if (currentVolume < 10) {
             currentVolume = currentVolume + 1;
         }
     }
-    public void reduceVolume() {  // уменьшить громкость на 1
+
+    public void volumeDown() {              // уменьшение громкости на 1
         if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
         }
     }
-    public void next() {  //следующая радиостанция
-        if (currentStation < 9) {
-            currentStation = currentStation + 1;
-        }else {
-            currentStation = 0;
-        }
-    }
-    public void previous() {  //предыдущая радиостанция
-        if (currentStation > 0) {
-            currentStation = currentStation - 1;
+
+
+    public void next() {                // следущая радиостанция
+        if (currentRadioStation < 9) {
+            currentRadioStation = currentRadioStation + 1;
         } else {
-            currentStation = 9;
+            currentRadioStation = 0;
         }
     }
+
+    public void prev() {                // предъидущая радиостанция
+        if (currentRadioStation > 0) {
+            currentRadioStation = currentRadioStation - 1;
+        } else {
+            currentRadioStation = 9;
+        }
+    }
+
 }
